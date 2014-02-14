@@ -1,3 +1,4 @@
+test me!
 # Actionman
 Actionman is a little 2D action game made to learn some technologies.
 It uses only the core dart language libraries and the latest HTML5 specification. In other words, it's canvas and dart:html powered.
@@ -15,6 +16,6 @@ The assets are under the [Creative Commons licence](http://creativecommons.org/l
 The code is under the [GNU General Public License](http://www.gnu.org/licenses/) (GPL).
 
 ## Website
-[greyna.eu/actionman](http://greyna.eu/actionman) will be hosting the game soon.
+You can test the game at [greyna.eu/actionman](http://greyna.eu/actionman).
 
-Check my website [greyna.eu](http://greyna.eu) if you want to know more about me.
+Check my website [greyna.eu](http://greyna.eu) if you want to know more about me but take care, it's one year old.
