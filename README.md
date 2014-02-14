@@ -7,4 +7,14 @@ The game is not ready. There is no documentation so getting a look at the code i
 
 I'm going to build it with an agile workflow. Versions will follow : "0.x.y" with 'x' the sprint number and 'y' the minor version.
 
+ * Previous version : 0.1 (february, 14)
+ * Nightly builds version : 0.2
+
+## Licence
+The assets are under the [Creative Commons licence](http://creativecommons.org/licenses/by-nc/4.0/deed.fr) (CC-BY-NC).
+The code is under the [GNU General Public License](http://www.gnu.org/licenses/) (GPL).
+
+## Website
+[greyna.eu/actionman](http://greyna.eu/actionman) will be hosting the game soon.
+
 Check my website [greyna.eu](http://greyna.eu) if you want to know more about me.
