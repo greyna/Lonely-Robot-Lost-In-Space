@@ -10,7 +10,7 @@ The game is not ready. There is no documentation so getting a look at the code i
 I'm going to build it with an agile workflow. Versions will follow : "0.x.y" with 'x' the sprint number and 'y' the minor version.
 
  * Current version : 0.1.2 (february, 14)
- * Nightly builds version : 0.2
+ * Nightly builds version : 0.2 ([see git branch 'v0.2'](https://github.com/greyna/actionman.dart/tree/v0.2))
 
 ## Licence
 The assets are under the [Creative Commons licence](http://creativecommons.org/licenses/by-nc/4.0/deed.fr) (CC-BY-NC).
