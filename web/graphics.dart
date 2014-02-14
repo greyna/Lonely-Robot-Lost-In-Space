@@ -15,7 +15,7 @@
     along with actionman.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * graphics.dart v0.1.2
+ * graphics.dart v0.2.0
  * 
  * Code hosted at github.com/greyna/actionman.dart. Made by greyna. Under GPL licence.
  */
