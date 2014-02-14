@@ -25,8 +25,8 @@ class Assets {
   static Map<String, ImageElement> imgs = new Map<String, ImageElement>();
 
   static void init() {
-    loadImg('assets/img/zelda.png');
-    loadImg('assets/img/background.jpg');
+    loadImg('game_assets/img/zelda.png');
+    loadImg('game_assets/img/background.jpg');
   }
   
   static void loadImg(String path) {

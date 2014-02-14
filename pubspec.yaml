@@ -1,4 +1,4 @@
 name: actionMan
-description: A sample web application
+description: 2D action game for browsers. Uses only core dart libraries for its engine. http://greyna.eu/actionman
 dependencies:
   browser: any

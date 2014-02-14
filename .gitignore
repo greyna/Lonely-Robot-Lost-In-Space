@@ -1,5 +1,6 @@
 # Dart and Dart Editor specific #
 #################################
+build/
 packages/
 pubspec.lock
 .project

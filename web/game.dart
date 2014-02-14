@@ -29,9 +29,9 @@ class Game {
     Assets.init();
     Input.init();
     
-    level = new Level(canvas.width, canvas.height, Assets.imgs['assets/img/background.jpg']);
+    level = new Level(canvas.width, canvas.height, Assets.imgs['game_assets/img/background.jpg']);
     
-    players.add(new Player(0,0, Assets.imgs['assets/img/zelda.png']));
+    players.add(new Player(0,0, Assets.imgs['game_assets/img/zelda.png']));
   }
   void start() {
     if (!looping) {
