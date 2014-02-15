@@ -15,7 +15,7 @@
     along with actionman.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * game.dart v0.1.2
+ * game.dart v0.2.0
  * 
  * Code hosted at github.com/greyna/actionman.dart. Made by greyna. Under GPL licence.
  */
@@ -23,30 +23,66 @@ part of actionman;
 
 class Game {
   bool looping = false;
-  Level level;
+  num _lastFrameTime = null;
+  Queue<num> _lastFrameTimes = new Queue<num>();
+  int targetUps = 60; // updates per second
+  int get period => 1000~/targetUps;
+  int _frameId = null;
   
-  void init() {
+  Game() {
     Assets.init();
-    Input.init();
-    
-    level = new Level(canvas.width, canvas.height, Assets.imgs['game_assets/img/background.jpg']);
-    
-    players.add(new Player(0,0, Assets.imgs['game_assets/img/zelda.png']));
+    init();
+    new Timer.periodic(new Duration(seconds: 1), _showFps);
   }
+  
   void start() {
     if (!looping) {
       looping = true;
-      window.animationFrame.then(_gameLoop);
+      _frameId = window.requestAnimationFrame(_animateFrame);
+      new Timer.periodic(new Duration(milliseconds: period), _update);
     }
   }
+  
   void stop() {
     looping = false;
+    if (_frameId != null) { 
+      window.cancelAnimationFrame(_frameId);
+      _frameId = null;
+    }
+    _lastFrameTime = null;
+    _lastFrameTimes.clear();
   }
-
-  void _gameLoop(num delta) {
-    if (!looping) return;
-    players[0].logic();
+  
+  void _update(Timer timer) {
+    if (!looping){
+      timer.cancel();
+      return;
+    }
+    
+    update();
+  }
+  
+  void _animateFrame(num time) {
+    _frameTime(time);
     draw();
-    window.animationFrame.then(_gameLoop);
+    _frameId = window.requestAnimationFrame(_animateFrame);
+  }
+  
+  void _frameTime(num time) {
+    if (_lastFrameTime != null) {
+      _lastFrameTimes.addFirst(time - _lastFrameTime);
+      if (_lastFrameTimes.length >= 100) _lastFrameTimes.removeLast();
+    }
+    
+    _lastFrameTime = time;
+  }
+  
+  void _showFps(Timer timer) {
+    var fps;
+    if (_lastFrameTimes.isNotEmpty)
+      fps = ((_lastFrameTimes.length*1000) / _lastFrameTimes.reduce((a,b) => a+b)).round();
+    else fps = 'null';
+
+    querySelector("#FPS").innerHtml = "$fps";
   }
 }

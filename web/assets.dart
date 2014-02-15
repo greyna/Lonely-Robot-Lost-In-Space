@@ -15,7 +15,7 @@
     along with actionman.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * assets.dart v0.1.2
+ * assets.dart v0.2.0
  * 
  * Code hosted at github.com/greyna/actionman.dart. Made by greyna. Under GPL licence.
  */
@@ -26,7 +26,7 @@ class Assets {
 
   static void init() {
     loadImg('game_assets/img/zelda.png');
-    loadImg('game_assets/img/background.jpg');
+    loadImg('game_assets/img/star-background.jpg');
   }
   
   static void loadImg(String path) {

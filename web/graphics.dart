@@ -15,7 +15,7 @@
     along with actionman.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * graphics.dart v0.1.2
+ * graphics.dart v0.2.0
  * 
  * Code hosted at github.com/greyna/actionman.dart. Made by greyna. Under GPL licence.
  */
@@ -24,12 +24,12 @@ part of actionman;
 
 void draw() {
   context.clearRect(0, 0, canvas.width, canvas.height);
-  drawLevel(game.level);
+  drawLevel(level);
   drawPlayer(players[0]);
 }
 
 void drawLevel(Level level) {
-  _drawImageWithScale(level.background, 0, 0, 2);
+  _drawImageWithScale(level.background, 0, 0, 0.6);
   context
     ..rect(0, 0, level.width, level.height)
     ..strokeStyle = 'black'

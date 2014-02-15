@@ -15,9 +15,10 @@
     along with actionman.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <!--
-    actionman.html v0.1.2
+    actionman.html v0.2.0
     
     Code hosted at github.com/greyna/actionman.dart. Made by greyna. Under GPL licence.
+    height="100" width="100"
 -->
 <!DOCTYPE html>
 
@@ -29,10 +30,18 @@
 <link rel="icon" type="image/png"  href="greyna.eu/images/icon.png">
 </head>
 <body>
-	<h1>ActionMan</h1>
-
-	<canvas id="canvas" height="550" width="600">Canvas not supported</canvas>
-
+  <a href="https://github.com/greyna/actionman.dart">
+    <img src="game_assets/img/forkmeongithub.png" height="200" width="200"
+      style="position: absolute; right:0; top:0;" />
+  </a>
+  
+  <h1>ActionMan</h1>
+  <p>Code hosted on <a href="https://github.com/greyna/actionman.dart">github</a>.
+  Game hosted on <a href="http://greyna.eu">greyna.eu</a>.</p><br/>
+  <p><b>Instructions:</b> Use arrows to move the player. <b>FPS:</b> <span id="FPS">null</span></p>
+	
+  <canvas id="canvas" height="550" width="600">Canvas not supported</canvas>
+  
 	<script type="application/dart" src="actionman.dart"></script>
 	<script src="packages/browser/dart.js"></script>
 </body>

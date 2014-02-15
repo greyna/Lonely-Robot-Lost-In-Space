@@ -15,7 +15,7 @@
     along with actionman.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * actionman.dart v0.1.2
+ * actionman.dart v0.2.0
  * 
  * Code hosted at github.com/greyna/actionman.dart. Made by greyna. Under GPL licence.
  */
@@ -23,6 +23,7 @@ library actionman;
 
 import 'dart:html';
 import 'dart:async';
+import 'dart:collection';
 
 part 'assets.dart';
 part 'graphics.dart';
@@ -32,10 +33,9 @@ part 'util.dart';
 part 'input.dart';
 part 'global.dart';
 part 'level.dart';
+part 'logic.dart';
 
 void main() {
-  game
-    ..init()
-    ..start();
+  game.start();
   print('actionman game started !');
 }
