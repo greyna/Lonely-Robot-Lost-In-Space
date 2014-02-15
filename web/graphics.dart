@@ -24,12 +24,12 @@ part of actionman;
 
 void draw() {
   context.clearRect(0, 0, canvas.width, canvas.height);
-  drawLevel(game.level);
+  drawLevel(level);
   drawPlayer(players[0]);
 }
 
 void drawLevel(Level level) {
-  _drawImageWithScale(level.background, 0, 0, 2);
+  _drawImageWithScale(level.background, 0, 0, 0.6);
   context
     ..rect(0, 0, level.width, level.height)
     ..strokeStyle = 'black'

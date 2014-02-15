@@ -23,6 +23,7 @@ library actionman;
 
 import 'dart:html';
 import 'dart:async';
+import 'dart:collection';
 
 part 'assets.dart';
 part 'graphics.dart';
@@ -32,10 +33,9 @@ part 'util.dart';
 part 'input.dart';
 part 'global.dart';
 part 'level.dart';
+part 'logic.dart';
 
 void main() {
-  game
-    ..init()
-    ..start();
+  game.start();
   print('actionman game started !');
 }

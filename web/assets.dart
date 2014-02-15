@@ -26,7 +26,7 @@ class Assets {
 
   static void init() {
     loadImg('game_assets/img/zelda.png');
-    loadImg('game_assets/img/background.jpg');
+    loadImg('game_assets/img/star-background.jpg');
   }
   
   static void loadImg(String path) {
