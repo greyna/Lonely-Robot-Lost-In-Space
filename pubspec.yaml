@@ -1,4 +1,4 @@
-name: actionMan
-description: 2D action game for browsers. Uses only core dart libraries for its engine. http://greyna.eu/actionman
+name: lrlis
+description: 2D action game for browsers. Uses only core dart libraries for its engine. http://greyna.eu/Lonely-Robot-Lost-In-Space
 dependencies:
   browser: any

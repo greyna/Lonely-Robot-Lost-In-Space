@@ -1,12 +1,12 @@
-/*
-    This file is part of actionman.
+/**
+    This file is part of Lonely Robot Lost In Space.
 
-    actionman is free software: you can redistribute it and/or modify
+    Lonely Robot Lost In Space is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    actionman is distributed in the hope that it will be useful,
+    Lonely Robot Lost In Space is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -14,17 +14,12 @@
     You should have received a copy of the GNU General Public License
     along with actionman.  If not, see <http://www.gnu.org/licenses/>.
 */
-/**
- * input.dart v0.2.1
- * 
- * Code hosted at github.com/greyna/actionman.dart. Made by greyna. Under GPL licence.
- */
-part of actionman;
+part of lrlis;
 
 class Input {
   final InputEnum enu;
-  final Map<InputEnum,bool> _downStates;
-  final Map<InputEnum,bool> _upStates;
+  final Map<int,bool> _downStates;
+  final Map<int,bool> _upStates;
   
   Input(InputEnum enu):
     enu = enu,
@@ -47,18 +42,19 @@ class Input {
     });
   }
   
-  bool isDown(InputEnum enu) => _downStates[enu];
-  bool isUp(InputEnum enu) => _upStates[enu];
+  bool isDown(InputEnum enu) => _downStates[enu._value];
+  bool isUp(InputEnum enu) => _upStates[enu._value];
   
   void reset() {
     for (var enu in enu.values) {
-      if (_upStates[enu] == true) _downStates[enu] = false;
-      _upStates[enu] = false;
+      if (_upStates[enu._value] == true) _downStates[enu._value] = false;
+      _upStates[enu._value] = false;
     }
   }
 }
 
 abstract class InputEnum {
-  const InputEnum._internal();
+  final int _value;
+  const InputEnum._internal(this._value);
   List<InputEnum> get values;
 }
